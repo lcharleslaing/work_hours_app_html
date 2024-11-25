@@ -1,0 +1,41 @@
+<div class="card w-full bg-base-100 shadow-xl mb-4">
+    <div class="card-body">
+        <h2 class="card-title">New Task</h2>
+        <form id="task-form" class="space-y-4">
+            <div class="form-control">
+                <label class="label">
+                    <span class="label-text">Task Description</span>
+                </label>
+                <input type="text" id="task-description" class="input input-bordered" required>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+                <div class="form-control">
+                    <label class="label">
+                        <span class="label-text">Start Time</span>
+                    </label>
+                    <input type="datetime-local" id="start-time" class="input input-bordered" required>
+                </div>
+
+                <div class="form-control">
+                    <label class="label">
+                        <span class="label-text">End Time</span>
+                    </label>
+                    <input type="datetime-local" id="end-time" class="input input-bordered" required>
+                </div>
+            </div>
+
+            <div class="form-control">
+                <label class="label">
+                    <span class="label-text">Location</span>
+                </label>
+                <input type="text" id="location" class="input input-bordered" readonly>
+                <button type="button" id="get-location" class="btn btn-secondary mt-2">Get Current Location</button>
+            </div>
+
+            <div class="card-actions justify-end">
+                <button type="submit" class="btn btn-primary">Save Task</button>
+            </div>
+        </form>
+    </div>
+</div> 

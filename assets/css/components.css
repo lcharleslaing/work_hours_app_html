@@ -1,0 +1,19 @@
+/* Header styles */
+.navbar {
+    padding: 1rem 2rem;
+}
+
+/* Task form styles */
+.card {
+    margin-bottom: 2rem;
+}
+
+/* Task list styles */
+.table-container {
+    overflow-x: auto;
+}
+
+/* User dropdown styles */
+.user-dropdown img {
+    border: 2px solid white;
+} 
