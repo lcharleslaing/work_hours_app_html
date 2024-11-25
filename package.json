@@ -1,0 +1,22 @@
+{
+  "name": "work_hours_app",
+  "version": "1.0.0",
+  "description": "Work hours app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lcharleslaing/work_hours_app_html.git"
+  },
+  "keywords": [
+    "Work"
+  ],
+  "author": "Lee Charles Laing <lcharleslaing@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lcharleslaing/work_hours_app_html/issues"
+  },
+  "homepage": "https://github.com/lcharleslaing/work_hours_app_html#readme"
+}

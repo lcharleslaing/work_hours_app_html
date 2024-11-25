@@ -1,5 +1,22 @@
+import { collection, query, where, getDocs } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+import { db, auth } from './firebase.js';
+
 export async function generateReport(startDate, endDate) {
-    // Will be implemented with Firebase
+    const user = auth.currentUser;
+    if (!user) return [];
+
+    const tasksQuery = query(
+        collection(db, 'tasks'),
+        where('userId', '==', user.uid),
+        where('startTime', '>=', startDate),
+        where('endTime', '<=', endDate)
+    );
+
+    const snapshot = await getDocs(tasksQuery);
+    return snapshot.docs.map(doc => ({
+        id: doc.id,
+        ...doc.data()
+    }));
 }
 
 export async function exportToCSV(tasks) {

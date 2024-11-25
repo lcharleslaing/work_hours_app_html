@@ -24,4 +24,18 @@ async function reverseGeocode(lat, lon) {
         console.error('Error reverse geocoding:', error);
         return `${lat}, ${lon}`;
     }
-} 
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const getLocationBtn = document.getElementById('get-location');
+    getLocationBtn?.addEventListener('click', async () => {
+        try {
+            const locationInput = document.getElementById('location');
+            locationInput.value = 'Getting location...';
+            const location = await getCurrentLocation();
+            locationInput.value = location;
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    });
+}); 
